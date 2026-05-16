@@ -1,0 +1,31 @@
+@use "./styles/Mixins" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  background-color: black;
+
+  @include respond(mobile) {
+    font-size: 0.9rem;
+  }
+
+  @include respond(tablet) {
+    font-size: 1rem;
+  }
+
+  @include respond(laptop) {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,89 @@
+@use "/src/styles/Variables.scss" as v;
+@use "/src/styles/Mixins" as m;
+
+.footer {
+  position: relative;
+  background-color: v.$background;
+  padding: 60px 5% 30px;
+  overflow: hidden;
+  border-top: v.$border-top;
+
+  &__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    z-index: 2;
+    position: relative;
+  }
+
+  &__logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: v.$text-color;
+    letter-spacing: -1px;
+
+    span {
+      color: v.$primary;
+      text-shadow: 0 0 10px rgba(v.$primary, 0.3);
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 1.5rem;
+
+    a {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 2rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: v.$primary;
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 1.1rem;
+
+    p {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s;
+
+      &:hover {
+        color: v.$text-color;
+      }
+    }
+  }
+
+  &__glow {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 100px;
+    background: v.$primary;
+    filter: blur(80px);
+    opacity: 0.15;
+    pointer-events: none;
+  }
+}

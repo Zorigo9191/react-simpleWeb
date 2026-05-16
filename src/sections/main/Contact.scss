@@ -1,0 +1,164 @@
+@use "/src/styles/Variables.scss" as v;
+@use "/src/styles/Mixins" as m;
+
+.contact {
+  padding: 100px 5%;
+  background-color: v.$background;
+  color: v.$text-color;
+  border-top: v.$border-top;
+  width: 100%;
+
+  @include m.respond(tablet) {
+    padding: 60px 20px;
+  }
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include m.respond(laptop) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+  }
+
+  &__info-side {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+
+    .highlight {
+      color: v.$primary;
+      text-shadow: 0 0 15px rgba(v.$primary, 0.4);
+    }
+  }
+
+  &__description {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  &__detail-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    h4 {
+      font-size: 1.1rem;
+      color: v.$text-color;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  &__icon {
+    font-size: 1.5rem;
+    color: v.$primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  &__form-side {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+
+    @include m.respond(mobile) {
+      padding: 25px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    label {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: v.$searchbar-backroundcolor;
+      color: v.$searchbar-font-color;
+      border: 1px solid transparent;
+      border-radius: v.$border-radius;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: v.$primary;
+        box-shadow: 0 0 10px rgba(v.$primary, 0.2);
+      }
+    }
+  }
+
+  &__btn-submit {
+    width: 100%;
+    padding: 12px 25px;
+    background: v.$primary;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+
+    @include m.respond(tablet) {
+      width: max-content;
+    }
+
+    &:hover {
+      box-shadow: 0 0 20px v.$primary;
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}

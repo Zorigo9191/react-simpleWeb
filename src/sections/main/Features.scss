@@ -1,0 +1,75 @@
+@use "/src/styles/Variables.scss" as v;
+@use "/src/styles/Mixins" as m;
+
+.features {
+  padding: 80px 5%;
+  background-color: v.$background;
+  text-align: center;
+  border-top: v.$border-top;
+
+  &__header {
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    font-size: 2.8rem;
+    color: v.$text-color;
+    margin-bottom: 1rem;
+  }
+
+  &__subtitle {
+    color: v.$primary;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    cursor: default;
+
+    &:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.07);
+      border-color: v.$primary;
+      box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.3),
+        0 0 15px rgba(v.$primary, 0.2);
+
+      .features__icon {
+        transform: scale(1.1);
+        color: v.$primary;
+      }
+    }
+  }
+
+  &__icon {
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+  }
+
+  &__card-title {
+    color: v.$text-color;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  &__card-text {
+    color: #94a3b8;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+}
