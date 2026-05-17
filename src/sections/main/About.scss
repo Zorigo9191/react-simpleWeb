@@ -30,21 +30,21 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+  }
 
-    &__img {
-      width: 100%;
-      max-width: 450px;
-      height: 350px;
-      object-fit: cover;
-      border-radius: 20px;
-      z-index: 2;
-      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.7));
+  &__img {
+    width: 100%;
+    max-width: 450px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    z-index: 2;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.7));
 
-      @include m.respond(tablet) {
-        max-width: 90%;
-        height: auto;
-        max-height: 300px;
-      }
+    @include m.respond(tablet) {
+      max-width: 90%;
+      height: auto;
+      max-height: 300px;
     }
   }
 
