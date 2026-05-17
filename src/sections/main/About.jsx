@@ -15,9 +15,9 @@ function About() {
             Über <span className="highlight">Uns</span>
           </h2>
           <p className="about__text">
-            Hier kommt dein Beschreibungstext hin. Sobald dieser Block
-            existiert, rutscht das Bild automatisch auf die linke Seite und wird
-            kleiner.
+            Wir sind ein kreatives Team, das moderne und hochwertige Weblösungen
+            mit Fokus auf Design, Performance und Benutzerfreundlichkeit
+            entwickelt.
           </p>
 
           <div className="about__stats">
