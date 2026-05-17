@@ -5,23 +5,9 @@ function About() {
   return (
     <section className="about" id="about">
       <div className="about__container">
-        <div
-          className="about__image-wrapper"
-          style={{ width: "100%", maxWidth: "400px", margin: "0 auto" }}
-        >
+        <div className="about__image-wrapper">
           <div className="about__glow-circle"></div>
-
-          <img
-            src={aboutImg}
-            alt="About Us"
-            className="about__img"
-            style={{
-              width: "100%",
-              height: "350px",
-              objectFit: "cover",
-              display: "block",
-            }}
-          />
+          <img src={aboutImg} alt="About Us" className="about__img" />
         </div>
 
         <div className="about__content">
