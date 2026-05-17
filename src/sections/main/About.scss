@@ -14,7 +14,6 @@
     width: 100%;
     max-width: 1100px;
     display: grid;
-    /* Lösung 1: minmax(0, 1fr) zwingt die Spalten, niemals breiter als 50% des Containers zu werden */
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 4rem;
     align-items: center;
@@ -34,19 +33,17 @@
   }
 
   &__img {
-    /* Lösung 2: Harte Grenzen für das Bild selbst */
     width: 100%;
-    max-width: 450px; /* Hier kannst du die exakte Wunschbreite einstellen (z.B. 400px oder 450px) */
-    height: 350px; /* Eine feste Höhe gibt dir die volle Kontrolle */
-    object-fit: cover; /* Schneidet das Bild sauber zu, damit es sich nicht verzerrt */
+    max-width: 400px;
+    height: 350px;
+    object-fit: cover;
     border-radius: 20px;
     z-index: 2;
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.7));
 
     @include m.respond(tablet) {
-      max-width: 90%; /* Auf dem Handy/Tablet wird es leicht schmaler gehalten */
+      max-width: 280px;
       height: auto;
-      max-height: 300px;
     }
   }
 
