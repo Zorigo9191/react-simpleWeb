@@ -1,5 +1,7 @@
 import React from "react";
+import "./About.scss";
 import aboutImg from "../../assets/about.jpg";
+
 function About() {
   return (
     <section className="about" id="about">
